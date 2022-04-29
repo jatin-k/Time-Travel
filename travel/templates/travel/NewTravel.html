@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% load bootstrap3 %}
+
+{% block content %}
+
+<div class="container">	
+	<h2>Travel to the Future!</h2>
+	<hr>
+	<form method="POST">
+		{% csrf_token %}	
+		{% bootstrap_form form %}
+		<input type="submit" class="btn btn-default" name="Submit" value="Submit">
+	</form>
+</div>
+
+{% endblock %}

@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="container">
+	<h2>Your Travel Plans!</h2>
+	<hr/>
+	<table class="table table-striped table-bordered">
+		<thead>
+			<tr>
+				<th>Subject</th>
+				<th>Created On</th>
+				<th>Message Date</th>
+				<th>Edit</th>
+				<th>Remove</th>
+			</tr>
+		</thead>
+		<tbody>
+			{% for plan in plans %}
+			<tr>
+				<td>{{ plan.subject }}</td>
+				<td>{{ plan.created_at }}</td>
+				<td>{{ plan.date }}</td>
+				<td><a href="{% url 'travel:plan-update' id=plan.id %}">Edit</a></td>
+				<td><a href="{% url 'travel:remove-travel-plan' id=plan.id %}" style="padding-left: 15px;"><i class="material-icons">delete</i></a></td>
+			</tr>
+			{% endfor %}
+		</tbody>
+</div>
+
+
+{% endblock %}
