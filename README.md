@@ -1,7 +1,7 @@
 # Time-Travel
 A Community which lets you travel in time.<br>
 A platform which lets you send email to your future self.<br>
-Here we have used Celery for scheduling task as per the date and time specified by the user.<br>
+Here we have used Celery for scheduling task as per the date and time specified by the user. Then the task will be executed as scheduled. After successful completion of the task the task get deleted automatically and user receives the mail on specified date and time.<br>
 Broker used: REDIS<br>
 Tech Stack used: HTML, CSS, JavaScript, Bootstrap, Python, Django, JQuery
 
